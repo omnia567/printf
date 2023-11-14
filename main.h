@@ -71,11 +71,11 @@ int print_Hex(va_list types, char map_to[],
 char buffer[], int f, char f_ch, int w, int precn, int s);
 
 /* Function to print non print char */
-int print_non_print(va_list types, char buffer[],
+int print_non_printtaable(va_list types, char buffer[],
 	int f, int w, int precn, int s);
 
 /* Funcion to print store address */
-int print_PTR(va_list types, char buffer[],
+int print_pointr(va_list types, char buffer[],
 	int f, int w, int precn, int s);
 
 /* Funciotns to Handles  */
@@ -99,7 +99,7 @@ int write_numb(int is_positive, int ind, char buffer[],
 	int f, int w, int precn, int s);
 int write_num(int ind, char bff[], int f, int w, int precn,
 	int length, char padd, char extra_c);
-int write_PTR(char buffer[], int ind, int length,
+int write_pointr(char buffer[], int ind, int length,
 	int w, int f, char padd, char extra_c, int padd_start);
 
 int write_unsnd(int is_negative, int ind,
@@ -107,8 +107,8 @@ char buffer[],
 	int f, int w, int precn, int s);
 
 /****************** print utls ******************/
-int is_print(char);
-int appendHexaCode(char, char[], int);
+int is_printtaable(char);
+int appendd_hexaa_codee(char, char[], int);
 int isDigit(char);
 
 long int convert_s_numb(long int num, int size);
