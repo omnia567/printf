@@ -11,7 +11,7 @@
  * @s: Size specifier
  * Return: Number of chars printed.
  */
-int print_pointr(va_list types, char buffer[],
+int write_pointer(va_list types, char buffer[],
 	int f, int w, int precn, int s)
 {
 	char extra_c = 0, padd = ' ';
