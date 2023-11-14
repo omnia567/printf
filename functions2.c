@@ -54,7 +54,7 @@ int print_pointr(va_list types, char buffer[],
 
 /************************* PRINT NON PRINTABLE *************************/
 /**
- * print_non_printtaable - Prints ascii codes in hexa of non printable chars
+ * print_non_printable - Prints ascii codes in hexa of non printable chars
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @f:  Calculates active flags
