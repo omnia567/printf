@@ -41,42 +41,42 @@ typedef struct ft ft_t;
 
 int _printf(const char *format, ...);
 int H_print(const char *ft, int *i,
-va_list list, char buffer[], int flags, int width, int precision, int size);
+va_list list, char buffer[], int f, int w, int precn, int s);
 
 /****************** FUNCTIONS ******************/
 
 /* Funtions to print chars and strings ,precent */
 int print_c(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 int print_s(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 int print_per(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 
 /* Functions to print numbers int and binary and octal , unsigned, hexdeciaml,hexupperer,hex */
 int print_i(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 int print_b(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 int print_unsned(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 int print_o(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 int print_hexaD(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 int print_hexaUpper(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 
 int print_Hex(va_list types, char map_to[],
-char buffer[], int flags, char flag_ch, int width, int precision, int size);
+char buffer[], int f, char f_ch, int w, int precn, int s);
 
 /* Function to print non print char */
 int print_non_print(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 
 /* Funcion to print store address */
 int print_PTR(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 
 /* Funciotns to Handles  */
 int get_f(const char *format, int *i);
@@ -86,25 +86,25 @@ int get_s(const char *format, int *i);
 
 /*Function to print STR in reverse*/
 int print_reve(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 
 /*Function to print a STR in rot 13*/
 int print_rot13str(va_list types, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 
 /* print W0idthHandler */
 int handleWriteC(char c, char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 int write_numb(int is_positive, int ind, char buffer[],
-	int flags, int width, int precision, int size);
-int write_num(int ind, char bff[], int flags, int width, int precision,
+	int f, int w, int precn, int s);
+int write_num(int ind, char bff[], int f, int w, int precn,
 	int length, char padd, char extra_c);
 int write_PTR(char buffer[], int ind, int length,
-	int width, int flags, char padd, char extra_c, int padd_start);
+	int w, int f, char padd, char extra_c, int padd_start);
 
 int write_unsnd(int is_negative, int ind,
 char buffer[],
-	int flags, int width, int precision, int size);
+	int f, int w, int precn, int s);
 
 /****************** print utls ******************/
 int is_print(char);
