@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			precn = get_precn(format, &i, list);
 			s = get_s(format, &i);
 			++i;
-			p = H_print(format, &i, list, buffer,
+			printed = H_print(format, &i, list, buffer,
 				f, w, precn, s);
 			if (p == -1)
 				return (-1);
@@ -64,5 +64,3 @@ void print_buffer(char buffer[], int *buff_ind)
 
 	*buff_ind = 0;
 }
-
-
