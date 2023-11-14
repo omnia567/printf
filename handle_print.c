@@ -19,7 +19,7 @@ int H_print(const char *ft, int *ind, va_list list, char buffer[],
 		{'c', print_c}, {'s', print_s}, {'%', print_per},
 		{'i', print_i}, {'d', print_i}, {'b', print_b},
 		{'u', print_unsned}, {'o', print_o}, {'x', print_hexaD},
-		{'X', print_hexaUpper}, {'p', print_PTR}, {'S', print_non_print},
+		{'X', print_hexaUpper}, {'p', print_pointr}, {'S', print_non_printtaable},
 		{'r', print_reve}, {'R', print_rot13str}
 	};
 	for (i = 0; ft_types[i].ft != '\0'; i++)
