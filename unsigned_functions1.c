@@ -15,7 +15,7 @@ int print_unsned(va_list types, char buffer[],
 	int f, int w, int precn, int s)
 {
 	int i = BUFF_SIZE - 2;
-	unsned long int num = va_arg(types, unsned long int);
+	unsigned long int num = va_arg(types, unsigned long int);
 
 	num = convert_s_unsnd(num, s);
 
@@ -51,8 +51,8 @@ int print_o(va_list types, char buffer[],
 {
 
 	int i = BUFF_SIZE - 2;
-	unsned long int num = va_arg(types, unsned long int);
-	unsned long int init_num = num;
+	unsigned  long int num = va_arg(types, unsigned  long int);
+	unsigned  long int init_num = num;
 
 	UNUSED(w);
 
@@ -131,8 +131,8 @@ int print_Hex(va_list types, char map_to[], char buffer[],
 	int f, char f_ch, int w, int precn, int s)
 {
 	int i = BUFF_SIZE - 2;
-	unsned long int num = va_arg(types, unsned long int);
-	unsned long int init_num = num;
+	unsigned  long int num = va_arg(types, unsigned long int);
+	unsigned  long int init_num = num;
 
 	UNUSED(w);
 
