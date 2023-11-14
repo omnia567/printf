@@ -2,6 +2,7 @@
 
 void print_buffer(char buffer[], int *buff_ind);
 
+<<<<<<< HEAD
 /
  * _printf - Printf function
  * @format: format.
@@ -43,6 +44,21 @@ int _printf(const char *format, ...)
 	p_ch += p;
 	}
 	}
+=======
+  /
+   * _printf - Printf function
+   * @format: format.
+   * Return: Printed chars.
+   */
+int _printf(const char *format, ...)
+{
+  int i, p = 0, p_ch = 0;
+  int f, w, precn, s, buff_ind = 0;
+  va_list list;
+  char buffer[BUFF_SIZE];
+  if (format == NULL)
+    return (-1);
+>>>>>>> f90e33915b0ac348b2ec2bb582cdd64d65f2222c
 
 	print_buffer(buffer, &buff_ind);
 
@@ -51,11 +67,19 @@ int _printf(const char *format, ...)
 	return (p_ch);
 }
 
+<<<<<<< HEAD
 /
  * print_buffer - Prints the contents of the buffer if it exist
  * @buffer: Array of chars
  * @buff_ind: Index at which to add next char, represents the length.
 */
+=======
+  /
+   * print_buffer - Prints the contents of the buffer if it exist
+   * @buffer: Array of chars
+   * @buff_ind: Index at which to add next char, represents the length.
+  */
+>>>>>>> f90e33915b0ac348b2ec2bb582cdd64d65f2222c
 void print_buffer(char buffer[], int *buff_ind)
 {
 	if (*buff_ind > 0)
