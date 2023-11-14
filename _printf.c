@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 			++i;
 			p = H_print(format, &i, list, buffer,
 				f, w, precn, s);
-			if (printed == -1)
+			if (p == -1)
 				return (-1);
 			p_ch += printed;
 		}
