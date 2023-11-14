@@ -93,16 +93,16 @@ int print_rot13str(va_list types, char buffer[],
 	int f, int w, int precn, int s);
 
 /* print W0idthHandler */
-int handleWriteC(char c, char buffer[],
+int handle_write_char(char c, char buffer[],
 	int f, int w, int precn, int s);
-int write_numb(int is_positive, int ind, char buffer[],
+int write_number(int is_positive, int ind, char buffer[],
 	int f, int w, int precn, int s);
 int write_num(int ind, char bff[], int f, int w, int precn,
 	int length, char padd, char extra_c);
-int write_pointr(char buffer[], int ind, int length,
+int write_pointer(char buffer[], int ind, int length,
 	int w, int f, char padd, char extra_c, int padd_start);
 
-int write_unsnd(int is_negative, int ind,
+int write_unsgnd(int is_negative, int ind,
 char buffer[],
 	int f, int w, int precn, int s);
 
