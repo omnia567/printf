@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	va_start(list, format);	
+	va_start(list, format);
 
 	for (i = 0; format && format[i] != '\0'; i++)
 	{
@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 		{
 			print_buffer(buffer, &buff_ind);
 			f = get_f(format, &i);
-			w = get_w(format, &i, list);
+			w= get_w(format, &i, list);
 			precn = get_precn(format, &i, list);
 			s = get_s(format, &i);
 			++i;
@@ -48,7 +48,6 @@ int _printf(const char *format, ...)
 	print_buffer(buffer, &buff_ind);
 
 	va_end(list);
-
 
 	return (p_ch);
 }
