@@ -32,7 +32,7 @@ int print_unsned(va_list types, char buffer[],
 
 	i++;
 
-	return (write_unsnd(0, i, buffer, f, w, precn, s));
+	return (write_unsgnd(0, i, buffer, f, w, precn, s));
 }
 
 /************* PRINT UNSIGNED NUMBER IN OCTAL  ****************/
@@ -74,7 +74,7 @@ int print_o(va_list types, char buffer[],
 
 	i++;
 
-	return (write_unsnd(0, i, buffer, f, w, precn, s));
+	return (write_unsgnd(0, i, buffer, f, w, precn, s));
 }
 
 /************** PRINT UNSIGNED NUMBER IN HEXADECIMAL **************/
@@ -157,5 +157,5 @@ int print_Hex(va_list types, char map_to[], char buffer[],
 
 	i++;
 
-	return (write_unsnd(0, i, buffer, f, w, precn, s));
+	return (write_unsgnd(0, i, buffer, f, w, precn, s));
 }
