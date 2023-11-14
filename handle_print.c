@@ -24,7 +24,7 @@ int H_print(const char *ft, int *ind, va_list list, char buffer[],
 	};
 	for (i = 0; ft_types[i].ft != '\0'; i++)
 		if (ft[*ind] == ft_types[i].ft)
-			return (ft_types[i].fn(list, buffer, f, w, precn, s));
+			return (ft_types[i].f(list, buffer, f, w, precn, s));
 
 	if (ft_types[i].ft == '\0')
 	{
