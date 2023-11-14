@@ -17,7 +17,7 @@ int print_c(va_list types, char buffer[],
 {
 	char c = va_arg(types, int);
 
-	return (handleWriteC(c, buffer, f, w, precn, s));
+	return (handle_write_char(c, buffer, f, w, precn, s));
 }
 /************************* PRINT A STRING *************************/
 /**
@@ -138,7 +138,7 @@ int print_i(va_list types, char buffer[],
 
 	i++;
 
-	return (write_numb(is_negative, i, buffer, f, w, precn, s));
+	return (write_number(is_negative, i, buffer, f, w, precn, s));
 }
 
 /************************* PRINT BINARY *************************/
