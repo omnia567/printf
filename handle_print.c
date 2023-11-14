@@ -1,49 +1,49 @@
 #include "main.h"
 /**
- * handle_print - Prints an argument based on its type
- * @fmt: Formatted string in which to print the arguments.
+ * H_print - Prints an argument based on its type
+ * @ft: Formatted string in which to print the arguments.
  * @list: List of arguments to be printed.
  * @ind: ind.
  * @buffer: Buffer array to handle print.
- * @flags: Calculates active flags
- * @width: get width.
- * @precision: Precision specification
- * @size: Size specifier
+ * @f: Calculates active flags
+ * @w: get width.
+ * @precn: Precision specification
+ * @s: Size specifier
  * Return: 1 or 2;
  */
-int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
-	int flags, int width, int precision, int size)
+int H_print(const char *ft, int *ind, va_list list, char buffer[],
+	int f, int w, int precn, int s)
 {
-	int i, unknow_len = 0, printed_chars = -1;
-	fmt_t fmt_types[] = {
-		{'c', print_char}, {'s', print_string}, {'%', print_percent},
-		{'i', print_int}, {'d', print_int}, {'b', print_binary},
-		{'u', print_unsigned}, {'o', print_octal}, {'x', print_hexadecimal},
-		{'X', print_hexa_upper}, {'p', print_pointer}, {'S', print_non_printable},
-		{'r', print_reverse}, {'R', print_rot13string}, {'\0', NULL}
+	int i, unknow_len = 0, p_ch = -1;
+	ft_t ft_types[] = {
+		{'c', print_c}, {'s', print_s}, {'%', print_per},
+		{'i', print_i}, {'d', print_i}, {'b', print_b},
+		{'u', print_unsned(}, {'o', print_o}, {'x', ‎print_hexaD},
+		{'X', print_hexaUpper}, {'p', print_PTR}, {'S', print_non_print‎},
+		{'r', print_reve‎}, {'R', print_rot13str‎}, {'\0', NULL}
 	};
-	for (i = 0; fmt_types[i].fmt != '\0'; i++)
-		if (fmt[*ind] == fmt_types[i].fmt)
-			return (fmt_types[i].fn(list, buffer, flags, width, precision, size));
+	for (i = 0; ft_types[i].ft != '\0'; i++)
+		if (ft[*ind] == ft_types[i].ft)
+			return (ft_types[i].fn(list, buffer, f, w, precn, s));
 
-	if (fmt_types[i].fmt == '\0')
+	if (ft_types[i].ft == '\0')
 	{
-		if (fmt[*ind] == '\0')
+		if (ft[*ind] == '\0')
 			return (-1);
 		unknow_len += write(1, "%%", 1);
-		if (fmt[*ind - 1] == ' ')
+		if (ft[*ind - 1] == ' ')
 			unknow_len += write(1, " ", 1);
-		else if (width)
+		else if (w)
 		{
 			--(*ind);
-			while (fmt[*ind] != ' ' && fmt[*ind] != '%')
+			while (ft[*ind] != ' ' && ft[*ind] != '%')
 				--(*ind);
-			if (fmt[*ind] == ' ')
+			if (ft[*ind] == ' ')
 				--(*ind);
 			return (1);
 		}
-		unknow_len += write(1, &fmt[*ind], 1);
+		unknow_len += write(1, &ft[*ind], 1);
 		return (unknow_len);
 	}
-	return (printed_chars);
+	return (p_ch);
 }
