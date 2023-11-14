@@ -2,7 +2,7 @@
 
 /****************** PRINT POINTER ******************/
 /**
- * print_PTR - Prints the value of a pointer variable
+ * print_pointr - Prints the value of a pointer variable
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @f:  Calculates active flags
@@ -11,7 +11,7 @@
  * @s: Size specifier
  * Return: Number of chars printed.
  */
-int print_PTR(va_list types, char buffer[],
+int print_pointr(va_list types, char buffer[],
 	int f, int w, int precn, int s)
 {
 	char extra_c = 0, padd = ' ';
@@ -48,13 +48,13 @@ int print_PTR(va_list types, char buffer[],
 	ind++;
 
 	/*return (write(1, &buffer[i], BUFF_SIZE - i - 1));*/
-	return (write_PTR(buffer, ind, length,
+	return (write_pointr(buffer, ind, length,
 		w, f, padd, extra_c, padd_start));
 }
 
 /************************* PRINT NON PRINTABLE *************************/
 /**
- * print_non_print - Prints ascii codes in hexa of non printable chars
+ * print_non_printtaable - Prints ascii codes in hexa of non printable chars
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @f:  Calculates active flags
@@ -63,7 +63,7 @@ int print_PTR(va_list types, char buffer[],
  * @s: Size specifier
  * Return: Number of chars printed
  */
-int print_non_print(va_list types, char buffer[],
+int print_non_printtaable(va_list types, char buffer[],
 	int f, int w, int precn, int s)
 {
 	int i = 0, offset = 0;
@@ -79,10 +79,10 @@ int print_non_print(va_list types, char buffer[],
 
 	while (str[i] != '\0')
 	{
-		if (is_print(str[i]))
+		if (is_printtaable(str[i]))
 			buffer[i + offset] = str[i];
 		else
-			offset += appendHexaCode(str[i], buffer, i + offset);
+			offset += appendd_hexaa_codee(str[i], buffer, i + offset);
 
 		i++;
 	}
