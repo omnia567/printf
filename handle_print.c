@@ -15,7 +15,7 @@ int H_print(const char *ft, int *ind, va_list list, char buffer[],
 	int f, int w, int precn, int s)
 {
 	int i, unknow_len = 0, p_ch = -1;
-	ft_t ft_types[] = {
+	fmt_t ft_types[] = {
 		{'c', print_c}, {'s', print_s}, {'%', print_per},
 		{'i', print_i}, {'d', print_i}, {'b', print_b},
 		{'u', print_unsned}, {'o', print_o}, {'x', print_hexaD},
