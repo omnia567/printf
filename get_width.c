@@ -10,29 +10,27 @@
  */
 int get_w(const char *format, int *i, va_list list)
 {
-    int curr_i;
-    int w = 0;
+  int curr_i;
+  int w = 0;
 
-    for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
+  for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
+  {
+    if (isDigit(format[curr_i]))
     {
-        if (isDigit(format[curr_i]))
-        {
-            w *= 10;
-            w += format[curr_i] - '0';
-        }
-        else if (format[curr_i] == '*')
-        {
-            curr_i++;
-            w = va_arg(list, int);
-            break;
-        }
-        else
-            break;
+      w *= 10;
+      w += format[curr_i] - '0';
     }
+    else if (format[curr_i] == '*')
+    {
+      curr_i++;
+      w = va_arg(list, int);
+      break;
+    }
+    else
+      break;
+  }
 
-    *i = curr_i - 1;
+  *i = curr_i - 1;
 
-    // Handle case when width is not specified or found
-    // Return a default value, or handle it based on your logic
-    return (w);
+  return (w);
 }
