@@ -63,7 +63,7 @@ int print_pointr(va_list types, char buffer[],
  * @s: Size specifier
  * Return: Number of chars printed
  */
-int print_non_printtaable(va_list types, char buffer[],
+int print_non_printable (va_list types, char buffer[],
 	int f, int w, int precn, int s)
 {
 	int i = 0, offset = 0;
@@ -79,10 +79,10 @@ int print_non_printtaable(va_list types, char buffer[],
 
 	while (str[i] != '\0')
 	{
-		if (is_printtaable(str[i]))
+		if (is_printable(str[i]))
 			buffer[i + offset] = str[i];
 		else
-			offset += appendd_hexaa_codee(str[i], buffer, i + offset);
+			offset += append_hexa_code(str[i], buffer, i + offset);
 
 		i++;
 	}
