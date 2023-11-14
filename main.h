@@ -32,12 +32,12 @@ struct ft
 
 
 /**
- * typedef struct ft ft_t - Struct op
+ * typedef struct ft fmt_t - Struct op
  *
  * @ft: The format.
- * @f_t: The function associated.
+ * @fmt_t: The function associated.
  */
-typedef struct ft ft_t;
+typedef struct ft fmt_t;
 
 int _printf(const char *format, ...);
 int H_print(const char *ft, int *i,
