@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 		{
 			print_buffer(buffer, &buff_index);
 			f = get_f(format, &i);
-			w= get_w(format, &i, list);
+			w = get_w(format, &i, list);
 			precn = get_precn(format, &i, list);
 			s = get_s(format, &i);
 			++i;
