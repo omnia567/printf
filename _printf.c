@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 				f, w, precn, s);
 			if (p == -1)
 				return (-1);
-			p_ch += printed;
+			p_ch += p;
 		}
 	}
 
