@@ -71,7 +71,7 @@ int print_Hex(va_list types, char map_to[],
 char buffer[], int f, char f_ch, int w, int precn, int s);
 
 /* Function to print non print char */
-int print_non_printtaable(va_list types, char buffer[],
+int print_non_printable (va_list types, char buffer[],
 	int f, int w, int precn, int s);
 
 /* Funcion to print store address */
@@ -107,8 +107,8 @@ char buffer[],
 	int f, int w, int precn, int s);
 
 /****************** print utls ******************/
-int is_printtaable(char);
-int appendd_hexaa_codee(char, char[], int);
+int is_printable(char);
+int append_hexa_code(char, char[], int);
 int isDigit(char);
 
 long int convert_s_numb(long int num, int size);
