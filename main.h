@@ -53,7 +53,7 @@ int print_s(va_list types, char buffer[],
 int print_per(va_list types, char buffer[],
 	int f, int w, int precn, int s);
 
-/* Functions to print numbers int and binary and octal , unsigned, hexdeciaml,hexupperer,hex */
+/* Functions to print num int , binry and oct, unsig, hexdmail,hexuper,hex */
 int print_i(va_list types, char buffer[],
 	int f, int w, int precn, int s);
 int print_b(va_list types, char buffer[],
